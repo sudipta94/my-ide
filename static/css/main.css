@@ -1,0 +1,85 @@
+#head{
+	background-color: crimson;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+#head h1{
+	color: aliceblue;
+}
+
+#footer{
+  padding-top: 10px;
+  margin-top: 20PX;
+	background-color: rgb(63, 63, 63);
+	color: aliceblue;
+	width: 100%;
+}
+#inputs{
+	min-height: 100px;
+	min-width: 340px;
+}
+#output textarea{
+	min-height: 200px;
+	min-width: 340px;
+}
+#output{
+	padding-top: 10px;
+}
+body { background-color:#ececec;}
+.set-number textarea, .numbers .line-no {
+  font-family: monospace !important;
+  line-height: normal !important
+}
+
+.set-number {
+  overflow: auto !important;
+  margin: 30px 0 0 9px;
+  width: 100%;
+}
+
+.set-number .lines {
+  margin: 0 3px 0 0;
+  padding: 0 2px 0 0;
+  min-width: 50px;
+  float: left
+}
+
+.set-number .numbers {
+  border-right: 1px solid #e6ebe6;
+  padding: 0;
+  margin: 0;
+}
+
+.set-number .numbers .line-no {
+  padding: 0 .5em 0 0;
+  margin: 0;
+  color: #aaa;
+  text-align: right;
+  white-space: nowrap
+}
+
+textarea {
+  overflow: auto;
+  width: auto;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  transition: none;
+}
+
+textarea:focus {
+  background-color: #fcfcfc;
+  box-shadow: none
+}
+
+.lines .numbers .active {
+  background-color: #E95546;
+  color: #fff;
+}
+#editor{
+  height: 500px; 
+  font-size:16px; 
+  width: 650px;
+  overflow: inherit;
+}

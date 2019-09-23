@@ -1,0 +1,32 @@
+@media (min-width: 992px) and (max-width:1199px) {
+    #editor{
+        height: 500px; 
+        font-size:16px; 
+        width: 500px;
+        overflow: inherit;
+      }
+}
+@media (min-width: 768px) and (max-width:991px) {
+    #editor{
+        height: 500px; 
+        font-size:16px; 
+        width: 300px;
+        overflow: inherit;
+      }
+}
+@media (min-width: 347px) and (max-width:767px) {
+    #editor{
+        height: 500px; 
+        font-size:16px; 
+        width: 250px;
+        overflow: inherit;
+      }
+}
+@media (max-width:346px) {
+    #editor{
+        height: 500px; 
+        font-size:16px; 
+        width: 200px;
+        overflow: inherit;
+      }
+}

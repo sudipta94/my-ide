@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- importent meta tags-->
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset = utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Title-->
+	<title>My Timeline IDE</title>
+	<!-- icon-->
+	<link rel="icon" href="/pic/icon.ico">
+		<!-- bootstrap-->
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<!--main css-->
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+	<!--header-->
+	<!--navigation bar-->
+	<header>
+		<div id="head">
+			<h1>My Timeline IDE</h1>
+		</div>
+	</header>
+	<section id="editor">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Practice Python, C++, C, Java, JavaScript. 
+					goto <a href="http://mytimeline.in">home</a> page</p>
+				</div>
+            </div>
+            <form action="./execution" method="POST">
+			<div class="row">
+                    <div class="col-md-8">
+                        <textarea name="code" placeholder="Write your code here" id="input"><% if(precode) { %><%=precode%><% } %></textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <textarea id="inputs" name="input" placeholder="Input"></textarea>
+                        </div>
+                        <div class="form-group">
+                        <label for="sel1">Select list:</label>
+                        <select name="lang" class="form-control" id="sel1">
+                            <option>Python</option>
+                            <option> C++</option>
+                            <option>C</option>
+                            <option>Java</option>
+                            <option>JavaScript</option>
+                        </select>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-success">Run</button>
+                        </div>
+                        <div  id="output">
+                        <textarea placeholder="Output"><% if(result){ %> <%=result.stdout %><%=result.stderr%><% } %></textarea>
+                        <label>memoryUsage: <% if(result){ %> <%=result.memoryUsage %><% } %></label>
+                         <label> cpu Usage: <% if(result){ %> <%=result.cpuUsage %><% } %></label>
+                        <label><% if(result){ %>errorType: <%=result.errorType %><% } %></label>
+                        </div>
+				</div>
+            </div>
+        </form>
+		</div>
+	</section>
+	<!-- footer section-->
+	<footer class="text-center" id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Copyright &copy 2019 All Rights Reserved by <span><a href="http://mytimeline.in">My Timeline</a></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--end footer section-->
+	<!--bootstarp-->
+	<script src="/js/bootstrap.js"></script>
+
+</body>
+
+</html>
+selected="<% if(langs) { %><%=langs%><% } %>"

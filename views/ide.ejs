@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- importent meta tags-->
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset = utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Title-->
+	<title>My Timeline IDE</title>
+	<!-- icon-->
+	<link rel="icon" href="/pic/icon.ico">
+		<!-- bootstrap-->
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<!--main css-->
+	<link rel="stylesheet" href="/css/main.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/autosize.js/1.18.1/jquery.autosize.min.js"></script>
+    <script type="text/javascript" src="/js/set-number.min.js"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="/css/responsive.css" rel="stylesheet" type="text/css">
+
+    </head>
+    <body>
+      <header>
+        <div id="head">
+          <h1>My Timeline IDE</h1>
+        </div>
+      </header>
+      <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                  <p>Practice Python, C++, C, Java, JavaScript. 
+                  goto <a href="https://mytimeline.in">home</a> page</p>
+                </div>
+                <p style="color: red"><%=er%></p>
+            </div>
+          <form action="./execution" method="POST">
+          <div class="row">
+            <div class="col-md-8 border border-primary">
+              <textarea id="editor"  name="code" placeholder="Write your code here" cols="57" spellcheck="false"><% if(precode) { %><%=precode%><% } %></textarea>
+            </div>
+            <div class="col-md-4">
+              <div>
+                <textarea id="inputs" name="input" placeholder="Input"></textarea>
+              </div>
+              <div class="form-group">
+              <label for="sel1">Select Language:</label>
+                <select name="lang" class="form-control" onchange="mylang()" id="sel1">
+                  <% if(langs=='Select') { %> <option value="Select" selected>Select Language</Select></option> <%} else {%> <option value="Select">Select Language</option> <% } %>
+                  <% if(langs=='Python') { %> <option value="Python" selected>Python</option> <%} else {%> <option value="Python">Python</option> <% } %>
+                  <% if(langs=='C++') { %> <option value="C++" selected>C++</option><%} else {%> <option value="C++">C++</option><% } %>
+                  <% if(langs=='C') { %><option value="C" selected>C</option><%} else {%> <option value="C">C</option><% } %>
+                  <% if(langs=='Java') { %><option value="Java" selected>Java</option><%} else {%> <option value="Java">Java</option><% } %>
+                  <% if(langs=='JavaScript') { %><option value="JavaScript" selected>JavaScript</option><%} else {%> <option value="JavaScript">JavaScript</option><% } %>
+                </select>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-success">Run</button>
+              </div>
+              <div  id="output">
+                <label>Output:</label>
+                <textarea disabled><% if(result){ %> <%=result.stdout %><%=result.stderr%><% } %></textarea>
+                <label>Memory Usage:<span style="color: red"><% if(result){ %> <%=result.memoryUsage %><% } %></span></label>
+                <label> Cpu Usage: <span style="color: red"><% if(result){ %> <%=result.cpuUsage %><% } %></span></label>
+                <label><% if(result){ %>ErrorType: <span style="color: red"><%=result.errorType %><% } %></span></label>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      </section>
+      <!-- footer section-->
+	    <footer class="text-center" id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p>
+              Copyright &copy 2019 All Rights Reserved by <span><a href="https:/mytimeline.in">My Timeline</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <!--end footer section-->
+  <!--bootstarp-->
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/main.js"></script>
+  </body>
+</html>

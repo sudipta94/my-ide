@@ -1,0 +1,18 @@
+{
+  "name": "my-ide",
+  "version": "1.0.0",
+  "description": "open source ide",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Sudipta Das",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compile-run": "^2.3.2",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
